@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motivasi QR</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            text-align: center;
+        }
+        .card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 40px;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            max-width: 400px;
+            width: 85%;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+        #quote {
+            font-size: 1.5rem;
+            font-style: italic;
+            margin: 20px 0;
+            min-height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        button {
+            background: #f39c12;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 25px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        button:hover { background: #e67e22; }
+    </style>
+</head>
+<body>
+
+<div class="card">
+    <div style="font-size: 40px;">💡</div>
+    <div id="quote">Sila tunggu...</div>
+    <button onclick="paparRawak()">Lagi Motivasi</button>
+</div>
+
+<script>
+    const kataKata = [
+        "Jangan berhenti saat lelah, berhentilah saat selesai.",
+        "Kejayaan bermula dengan keberanian untuk mencuba.",
+        "Hari ini adalah peluang untuk menjadi lebih baik.",
+        "Usaha tidak akan mengkhianati hasil.",
+        "Fokus pada solusi, bukan pada masalah.",
+        "Setiap langkah kecil membawa anda lebih dekat ke matlamat.",
+        "Percaya pada diri sendiri adalah kunci kejayaan."
+    ];
+
+    function paparRawak() {
+        const index = Math.floor(Math.random() * kataKata.length);
+        document.getElementById('quote').innerText = `"${kataKata[index]}"`;
+    }
+
+    window.onload = paparRawak;
+</script>
+
+</body>
+</html>
