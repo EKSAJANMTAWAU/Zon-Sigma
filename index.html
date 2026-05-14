@@ -2,8 +2,12 @@
 <html lang="ms">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Inspirasi Zon-Sigma EKSA</title>
+    <link rel="manifest" href="manifest.json">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <style>
         body {
             font-family: 'Segoe UI', sans-serif;
@@ -15,10 +19,11 @@
             background: linear-gradient(135deg, #00264d 0%, #004080 100%);
             color: white;
             text-align: center;
+            overflow: hidden;
         }
         .card {
             background: rgba(255, 255, 255, 0.1);
-            padding: 35px;
+            padding: 30px;
             border-radius: 25px;
             backdrop-filter: blur(15px);
             box-shadow: 0 15px 35px rgba(0,0,0,0.4);
@@ -49,18 +54,19 @@
             width: 60px;
             height: 4px;
             background: #28a745;
-            margin: 10px auto;
+            margin: 10px auto 20px;
             border-radius: 10px;
         }
         #quote {
             font-size: 1.3rem;
             font-style: italic;
-            margin: 25px 0;
-            min-height: 100px;
+            margin: 20px 0;
+            min-height: 120px;
             display: flex;
             align-items: center;
             justify-content: center;
             line-height: 1.6;
+            padding: 0 10px;
         }
         button {
             background: #ffd700;
@@ -71,33 +77,31 @@
             font-weight: bold;
             cursor: pointer;
             box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
+            text-transform: uppercase;
+            font-size: 0.9rem;
         }
+        button:active { transform: scale(0.95); }
     </style>
 </head>
 <body>
 
 <div class="card">
     <div class="logo-container">
-        <!-- Logo EKSA dimasukkan terus ke dalam kod -->
+        <!-- Pastikan fail logo.png ada dalam folder yang sama di GitHub -->
         <img src="logo.png" alt="Logo EKSA" class="logo-img">
     </div>
     
     <h1 class="brand-name">ZON SIGMA</h1>
     <div class="divider"></div>
-    <div id="quote">Sila tekan butang...</div>
-    <button onclick="paparRawak()">KATA MOTIVASI SETERUSNYA</button>
+
+    <!-- Bahagian kata-kata motivasi (Dibiarkan kosong untuk diisi oleh JS) -->
+    <div id="quote"></div>
+    
+    <button onclick="paparRawak()">Kata Motivasi Seterusnya</button>
 </div>
 
 <script>
     const kataKata = [
-        "EKSA: Amalan Budaya Kerja Cemerlang.",
-        "Persekitaran kondusif, kerja lebih produktif.",
-        "Kebersihan dan kekemasan adalah kunci profesionalisme.",
-        "Setiap pagi adalah peluang baru untuk menjadi lebih baik.",
-        "Kunci ketenangan adalah melepaskan apa yang tidak boleh dikawal.",
-        "Disiplin adalah jambatan antara matlamat dan pencapaian.",
-        "Budayakan amalan 5S dalam setiap tugasan anda.",
-        "Masa depan anda dicipta oleh apa yang anda lakukan hari ini."
         "EKSA: Persekitaran Kondusif, Kerja Produktif.",
         "Amalan 5S: Sisih, Susun, Sapu, Seragam, Sentiasa Amal.",
         "Kebersihan pejabat mencerminkan profesionalisme kita.",
@@ -148,8 +152,6 @@
         "Zon Sigma: Terus unggul dalam kecemerlangan.",
         "Kualiti adalah tanggungjawab setiap individu.",
         "Hayati nilai murni dalam setiap langkah kerja.",
-
-        // Motivasi Kejayaan & Disiplin (51-365)
         "Masa depan dicipta oleh apa yang anda lakukan hari ini.",
         "Jangan berhenti saat lelah, berhentilah saat selesai.",
         "Kejayaan bermula dengan keberanian untuk mencuba.",
@@ -296,13 +298,26 @@
         "Hasil yang hebat memerlukan masa yang cukup.",
         "Jangan bandingkan permulaan anda dengan kejayaan orang.",
         "Setiap bunga mekar pada waktunya yang tersendiri.",
+        "Jadilah orang yang memberi inspirasi, bukan kritik.",
+        "Senyuman anda mungkin cahaya bagi orang lain.",
+        "Kekal tenang dan teruskan perjuangan.",
+        "Lakukan yang terbaik, tuhan uruskan selebihnya.",
+        "Minda yang positif menghasilkan hidup yang positif.",
+        "Anda mampu melakukan perkara luar biasa.",
+        "Kejayaan bermula di dalam fikiran anda."
     ];
 
     function paparRawak() {
         const index = Math.floor(Math.random() * kataKata.length);
-        document.getElementById('quote').innerText = `"${kataKata[index]}"`;
+        const quoteElement = document.getElementById('quote');
+        // Menambah tanda petikan secara automatik
+        quoteElement.innerText = `"${kataKata[index]}"`;
     }
-    window.onload = paparRawak;
+
+    // Menjalankan fungsi secara automatik sebaik sahaja page dibuka
+    window.onload = function() {
+        paparRawak();
+    };
 </script>
 
 </body>
