@@ -3,182 +3,107 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inspirasi Zon-Sigma</title>
+    <title>Inspirasi Zon-Sigma EKSA</title>
     <style>
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Segoe UI', sans-serif;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
             margin: 0;
-            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            background: linear-gradient(135deg, #00264d 0%, #004080 100%);
             color: white;
             text-align: center;
         }
         .card {
             background: rgba(255, 255, 255, 0.1);
-            padding: 40px;
+            padding: 35px;
             border-radius: 25px;
             backdrop-filter: blur(15px);
             box-shadow: 0 15px 35px rgba(0,0,0,0.4);
-            max-width: 500px;
+            max-width: 450px;
             width: 85%;
             border: 1px solid rgba(255,255,255,0.2);
         }
-        /* Bahagian Logo dan Nama */
-        .header-section {
-            margin-bottom: 20px;
-        }
-        .logo {
-            font-size: 50px;
+        .logo-container {
             background: white;
-            width: 80px;
-            height: 80px;
-            line-height: 80px;
-            border-radius: 50%;
-            margin: 0 auto 15px;
-            color: #1e3c72;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            padding: 10px;
+            border-radius: 15px;
+            margin-bottom: 15px;
+            display: inline-block;
+        }
+        .logo-img {
+            width: 200px;
+            height: auto;
+            display: block;
         }
         .brand-name {
             font-size: 1.8rem;
             font-weight: 800;
-            letter-spacing: 3px;
-            text-transform: uppercase;
-            margin: 0;
-            color: #f39c12; /* Warna emas */
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            letter-spacing: 2px;
+            margin: 5px 0;
+            color: #ffd700;
         }
         .divider {
-            width: 50px;
-            height: 3px;
-            background: white;
+            width: 60px;
+            height: 4px;
+            background: #28a745;
             margin: 10px auto;
-            border-radius: 2px;
-            opacity: 0.5;
+            border-radius: 10px;
         }
         #quote {
-            font-size: 1.4rem;
+            font-size: 1.3rem;
             font-style: italic;
             margin: 25px 0;
-            min-height: 120px;
+            min-height: 100px;
             display: flex;
             align-items: center;
             justify-content: center;
             line-height: 1.6;
         }
         button {
-            background: #f39c12;
-            color: white;
+            background: #ffd700;
+            color: #00264d;
             border: none;
-            padding: 15px 30px;
-            border-radius: 30px;
+            padding: 15px 25px;
+            border-radius: 50px;
             font-weight: bold;
-            font-size: 1rem;
             cursor: pointer;
-            transition: 0.3s;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
         }
-        button:hover { 
-            background: #e67e22; 
-            transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
-        }
-        button:active { transform: scale(0.95); }
     </style>
 </head>
 <body>
 
 <div class="card">
-   <div class="logo-container">
-    <img src="logo.png" alt="Logo EKSA" style="width: 200px; height: auto;">
-</div>
-<h1 class="brand-name">ZON SIGMA</h1>
-<div class="divider"></div>
-
-    <div id="quote">Menjana kata-kata semangat...</div>
+    <div class="logo-container">
+        <!-- Logo EKSA dimasukkan terus ke dalam kod -->
+        <img src="https://i.ibb.co/Lz0zZzS/logo-eksa.png" alt="Logo EKSA" class="logo-img">
+    </div>
     
+    <h1 class="brand-name">ZON SIGMA</h1>
+    <div class="divider"></div>
+    <div id="quote">Sila tekan butang...</div>
     <button onclick="paparRawak()">KATA MOTIVASI SETERUSNYA</button>
 </div>
 
 <script>
     const kataKata = [
-        "Kejayaan adalah jumlah usaha kecil yang diulang hari demi hari.",
-        "Jangan biarkan hari semalam merampas terlalu banyak waktu hari ini.",
-        "Disiplin adalah melakukan apa yang perlu walaupun anda tidak mahu.",
-        "Masa depan anda dicipta oleh apa yang anda lakukan hari ini.",
-        "Kesulitan sering menyediakan orang biasa untuk nasib yang luar biasa.",
-        "Jangan takut berjalan lambat, hanya takut untuk berhenti.",
-        "Percayalah anda boleh, maka anda sudah separuh jalan ke sana.",
-        "Satu-satunya cara melakukan kerja hebat adalah mencintai apa yang dilakukan.",
-        "Rahsia untuk maju adalah dengan bermula.",
-        "Kegagalan adalah peluang bermula semula dengan lebih bijak.",
-        "Usaha tidak akan mengkhianati hasil.",
-        "Fokus pada solusi, bukan pada masalah.",
-        "Setiap langkah kecil membawa anda lebih dekat ke matlamat.",
-        "Percaya pada diri sendiri adalah kunci kejayaan.",
-        "Jangan berhenti saat lelah, berhentilah saat selesai.",
-        "Keberanian adalah kunci untuk membuka pintu kejayaan.",
-        "Mimpi tidak akan jadi nyata kecuali jika anda bekerja untuknya.",
-        "Hargai masa anda, kerana ia tidak akan kembali.",
-        "Jadilah lebih baik daripada anda yang semalam.",
-        "Sikap yang betul menentukan ketinggian kejayaan anda.",
-        "Kekuatan minda adalah segalanya.",
-        "Setiap pagi adalah peluang baru untuk memperbaiki diri.",
-        "Kesabaran itu pahit, tetapi buahnya manis.",
-        "Ubah fikiran anda dan anda akan mengubah dunia anda.",
-        "Jangan bandingkan musim anda dengan musim orang lain.",
-        "Lakukan sesuatu hari ini yang akan disyukuri di masa depan.",
-        "Tiada rahsia untuk berjaya, ia hasil persediaan dan kerja keras.",
-        "Batasan anda hanyalah imaginasi anda.",
-        "Perkara hebat tidak pernah datang dari zon selesa.",
-        "Jangan beritahu orang impian anda, tunjukkan kepada mereka.",
-        "Bangun dengan keazaman, tidur dengan kepuasan.",
-        "Ia mungkin sukar, tetapi tidak mustahil.",
-        "Kunci kejayaan adalah fokus pada matlamat, bukan halangan.",
-        "Cara untuk bermula adalah berhenti bercakap dan mula bertindak.",
-        "Kecemerlangan adalah tabiat, bukan tindakan sekali-sekala.",
-        "Rezeki tidak pernah salah alamat, teruskan berusaha.",
-        "Jangan biarkan negatif orang lain memadamkan api anda.",
-        "Hati yang bersyukur adalah magnet keajaiban.",
-        "Visi tanpa tindakan hanyalah angan-angan.",
-        "Jangan tunggu peluang, ciptakannya.",
-        "Hidup bukan tentang mencari diri, tetapi mencipta diri sendiri.",
-        "Setiap cabaran adalah satu pelajaran berharga.",
-        "Pendidikan adalah senjata paling berkuasa mengubah dunia.",
-        "Kebaikan adalah bahasa yang didengar oleh orang pekak.",
-        "Senyuman adalah sedekah yang paling mudah.",
-        "Integriti adalah melakukan perkara betul walaupun tiada yang melihat.",
-        "Jangan takut gagal, takutlah jika tidak mencuba langsung.",
-        "Hargai setiap detik dalam hidup anda.",
-        "Kecemerlangan bermula dengan keputusan untuk mencuba.",
-        "Teruskan melangkah, puncak sudah semakin hampir."
-    ];
-
-    // Melengkapkan senarai sehingga 365
-    const tambahan = [
-        "Jadilah kuat, bukan untuk menunjuk, tapi untuk bertahan.",
-        "Satu langkah ke depan lebih baik daripada seribu angan-angan.",
+        "EKSA: Amalan Budaya Kerja Cemerlang.",
+        "Persekitaran kondusif, kerja lebih produktif.",
+        "Kebersihan dan kekemasan adalah kunci profesionalisme.",
+        "Setiap pagi adalah peluang baru untuk menjadi lebih baik.",
         "Kunci ketenangan adalah melepaskan apa yang tidak boleh dikawal.",
-        "Jangan biarkan dunia mengubah senyuman anda.",
-        "Berhenti mencari alasan, mula mencari jalan.",
-        "Setiap hari adalah kanvas kosong, lukislah sesuatu yang indah.",
-        "Kekuatan tidak datang dari kemenangan, tapi dari perjuangan.",
-        "Masa adalah emas, gunakannya untuk membina masa depan.",
-        "Jadilah cahaya dalam kegelapan orang lain.",
-        "Kejayaan sejati adalah apabila anda mampu memberi kembali."
+        "Disiplin adalah jambatan antara matlamat dan pencapaian.",
+        "Budayakan amalan 5S dalam setiap tugasan anda.",
+        "Masa depan anda dicipta oleh apa yang anda lakukan hari ini."
     ];
-
-    while(kataKata.length < 365) {
-        kataKata.push(...tambahan);
-    }
 
     function paparRawak() {
         const index = Math.floor(Math.random() * kataKata.length);
         document.getElementById('quote').innerText = `"${kataKata[index]}"`;
     }
-
     window.onload = paparRawak;
 </script>
 
